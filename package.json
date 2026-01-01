@@ -1,0 +1,37 @@
+{
+  "name": "getyear",
+  "version": "1.0.0",
+  "description": "Get the current year using AI. Because why not?",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "keywords": [
+    "ai",
+    "year",
+    "date",
+    "meme",
+    "unnecessary",
+    "ovengineered",
+    "machine-learning",
+    "artificial-intelligence"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "ai": "^4.0.0"
+  }
+}
