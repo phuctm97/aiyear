@@ -4,11 +4,16 @@ import { generateText } from "ai";
  * Get the current year using AI.
  * Because sometimes you need a billion-parameter model to tell you what year it is.
  *
+ * @example
+ * import { aiYear } from "aiyear";
+ * import { openai } from "@ai-sdk/openai";
+ * const year = await aiYear({ model: openai("gpt-4o") });
+ *
  * @param {Object} [options] - Configuration options
  * @param {import('ai').LanguageModel} [options.model] - AI model to use (from Vercel AI SDK)
  * @returns {Promise<number>} The current year (probably)
  */
-export async function getYear(options = {}) {
+export async function aiYear(options = {}) {
   const { model } = options;
 
   if (!model) {

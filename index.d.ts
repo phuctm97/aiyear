@@ -1,6 +1,6 @@
 import type { LanguageModel } from "ai";
 
-export interface GetYearOptions {
+export interface AIYearOptions {
   /**
    * AI model to use (from Vercel AI SDK).
    * If not provided, falls back to `new Date().getFullYear()`.
@@ -15,4 +15,4 @@ export interface GetYearOptions {
  * @param options - Configuration options
  * @returns The current year (probably)
  */
-export function getYear(options?: GetYearOptions): Promise<number>;
+export function aiYear(options?: AIYearOptions): Promise<number>;

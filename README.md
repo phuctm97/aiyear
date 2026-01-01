@@ -1,4 +1,4 @@
-# getyear
+# aiyear
 
 Get the current year using AI.
 
@@ -7,24 +7,21 @@ Let AI update your website's footer so that your team can focus on more importan
 ## Installation
 
 ```bash
-npm install getyear
+npm install aiyear
 ```
 
 ## Usage
 
 ```javascript
-import { getYear } from "getyear";
-
 // Without AI (boring)
-const year = await getYear();
-// => 2026
+const year = new Date().getFullYear();
+// => 2026 
 
 // With AI (the future)
+import { aiYear } from "aiyear";
 import { openai } from "@ai-sdk/openai";
 
-const year = await getYear({
-  model: openai("gpt-4o"),
-});
+const year = await aiYear({ model: openai("gpt-4o") });
 // => 2026 (but with more carbon emissions)
 ```
 
@@ -35,27 +32,25 @@ This package uses the [AI SDK](https://ai-sdk.dev), so you can use any supported
 ```javascript
 // OpenAI
 import { openai } from "@ai-sdk/openai";
-getYear({ model: openai("gpt-4o") });
+aiYear({ model: openai("gpt-4o") });
 
 // Anthropic
 import { anthropic } from "@ai-sdk/anthropic";
-getYear({ model: anthropic("claude-3-5-sonnet-20241022") });
+aiYear({ model: anthropic("claude-3-5-sonnet-20241022") });
 
 // Google
 import { google } from "@ai-sdk/google";
-getYear({ model: google("gemini-1.5-pro") });
+aiYear({ model: google("gemini-1.5-pro") });
 
 // And many more...
 ```
 
-## Performance
+## Comparison
 
 | Method | Time | Cost | Carbon Footprint |
 | --- | --- | --- | --- |
 | `new Date().getFullYear()` | ~0.001ms | Free | None |
-| `getYear({ model: gpt4o })` | ~500ms | $0.0001 | Yes |
-
-Choose wisely.
+| `aiYear({ model: gpt4o })` | ~500ms | $0.0001 | Yes |
 
 ## License
 

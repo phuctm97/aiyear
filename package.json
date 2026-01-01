@@ -1,7 +1,7 @@
 {
-  "name": "getyear",
+  "name": "aiyear",
   "version": "1.0.0",
-  "description": "Get the current year using AI. Because why not?",
+  "description": "Get the current year using AI. Because sometimes you need a billion-parameter model to tell you what year it is.",
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
